@@ -1,0 +1,55 @@
+<!--    Hey! What're you doing here?    -->
+<!-- Go check out my links on the site! -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/index.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/0b12070de9.js" crossorigin="anonymous"></script>
+
+        <title>Austin Lynn Huffman</title>
+    </head>
+    <body>
+        <div id="background-animation"></div>
+
+        <div class="center-content">
+            <h1 class="name">Austin Lynn Huffman</h1>
+            <p class="tagline">Student • Info Tech • Car Guy</p>
+            <ul class="links">
+                <li><a href="https://www.linkedin.com/in/austinlynnhuffman/"><i class="fab fa-linkedin fa-3x"></i></a></li>
+                <li><a href="https://github.com/Jellayy"><i class="fab fa-github-square fa-3x"></i></a></li>
+                <li><a href="https://blog.alhuff.com/"><i class="fas fa-pen-square fa-3x"></i></a></li>
+                <li><a href="mailto: austinlynnhuffman@gmail.com"><i class="fas fa-envelope-square fa-3x"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Vanta.js Animated Background -->
+        <script src="style/vanta.js/three.min.js"></script>
+        <script src="style/vanta.js/vanta.waves.min.js"></script>
+        <script>
+        VANTA.WAVES({
+        el: "#background-animation",
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x10202,
+        shininess: 20.00,
+        waveSpeed: 0.65
+        })
+        </script>
+
+    </body>
+</html>

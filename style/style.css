@@ -1,0 +1,7 @@
+html * {
+    font-family: Roboto;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+}
