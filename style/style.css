@@ -1,7 +1,134 @@
+/* Global Style Settings */
+
 html * {
     font-family: Roboto;
-    color: white;
-    text-decoration: none;
-    list-style: none;
     margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #111111;
+}
+
+.flexdiv {
+    display: flex;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Background Animation */
+
+#background-animation {
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    animation: fadein 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Main Elements */
+
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    background-color: #1b1b1b;
+    border: 1px solid #5d5d5d;
+    border-radius: 10px;
+    width: 350px;
+    overflow: hidden;
+}
+
+/* Card Header */
+
+.card-header {
+    padding: 15px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #5d5d5d;
+}
+
+.card-header img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.card-header .title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-header .subtitle {
+    font-size: 15px;
+    color: #e3e3e3;
+    letter-spacing: 4px;
+}
+
+/* Card Nav */
+
+.card-header nav a {
+    font-size: 20px;
+    color: #e3e3e3;
+    transition: all 0.5s;
+    width: 50%;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+}
+
+.card-header nav a.selected {
+    color: #FFFFFF;
+    border-bottom: 3px solid white;
+}
+
+/* Card Content Wrapper (Always 2x width of main wrapper) */
+.card-content {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s;
+}
+
+/* Card Item (Same width as main wrapper) */
+
+.item {
+    width: 350px;
+}
+
+.card-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+/* List Links */
+
+.list-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    border: 1px solid #5d5d5d;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.list-link:hover {
+    background-color: #5d5d5d;
 }

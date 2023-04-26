@@ -1,12 +1,8 @@
-<!--    Hey! What're you doing here?    -->
-<!-- Go check out my links on the site! -->
-
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Stylesheets -->
+        <!-- Load Stylesheets -->
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/index.css">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,32 +10,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
         <!-- Font Awesome Icons -->
-        <script src="https://kit.fontawesome.com/0b12070de9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 
         <title>Austin Lynn Huffman</title>
     </head>
     <body>
-        <div id="background-animation"></div>
-
-        <div class="center-content">
-            <h1 class="name">Austin Lynn Huffman</h1>
-            <p class="tagline">Student &bull; Info Tech &bull; Car Guy</p>
-            <ul class="links">
-                <li><a href="https://www.linkedin.com/in/austinlynnhuffman/"><i class="fab fa-linkedin fa-3x"></i></a></li>
-                <li><a href="https://github.com/Jellayy"><i class="fab fa-github-square fa-3x"></i></a></li>
-                <li><a href="https://blog.alhuff.com/"><i class="fas fa-pen-square fa-3x"></i></a></li>
-                <li><a href="mailto: austinlynnhuffman@gmail.com"><i class="fas fa-envelope-square fa-3x"></i></a></li>
-            </ul>
-        </div>
-
         <!-- Vanta.js Animated Background -->
-        <script src="style/vanta.js/three.min.js"></script>
-        <script src="style/vanta.js/vanta.waves.min.js"></script>
+        <div id="background-animation"></div>
+        <script src="js/vantajs/three.min.js"></script>
+        <script src="js/vantajs/vanta.waves.min.js"></script>
         <script>
         VANTA.WAVES({
         el: "#background-animation",
-        mouseControls: false,
-        touchControls: false,
+        mouseControls: true,
+        touchControls: true,
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
@@ -47,9 +31,88 @@
         scaleMobile: 1.00,
         color: 0x10202,
         shininess: 20.00,
-        waveSpeed: 0.65
+        waveSpeed: 0.50
         })
         </script>
+
+        <!-- Main Content -->
+        <div class="wrapper">
+            <div class="card">
+                <!-- Card Header -->
+                <div class="card-header">
+                    <!-- Title -->
+                    <div class="flexdiv" style="flex-direction: row; align-items: center; margin-bottom: 10px;">
+                        <img src="assets/img/2023_ahlogo_whiteontransparent_crop.png">
+                        <div class="flexdiv" style="flex-direction: column;">
+                            <p class="title">Austin Lynn Huffman</p>
+                            <p class="subtitle">@alhuff_</p>
+                        </div>
+                    </div>
+                    <!-- Nav -->
+                    <nav class="flexdiv" style="flex-direction: row; align-items: center; justify-content: space-around;">
+                        <a href="#photography" id="photography-link"> 
+                            <i class="fa-solid fa-camera"></i>
+                        </a>
+                        <a href="#development" id="development-link">
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Card Content Wrapper -->
+                <div id="card-content-wrapper" class="card-content">
+                    
+                    <!-- Photography Content -->
+                    <div id="photography" class="item">
+                        <div class="card-padding">
+                            <!-- Links -->
+                            <a href="https://photos.alhuff.com/" class="list-link">
+                                <i class="fa-solid fa-camera"></i>
+                                <p>Portfolio</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://www.instagram.com/alhuff_/" class="list-link">
+                                <i class="fa-brands fa-instagram"></i>
+                                <p>Instagram</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Development Content -->
+                    <div class="item">
+                        <div class="card-padding">
+                            <!-- Links -->
+                            <a href="https://www.linkedin.com/in/austinlynnhuffman/" class="list-link">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <p>Linkedin</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://blog.alhuff.com/" class="list-link">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <p>Blog</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://github.com/Jellayy" class="list-link">
+                                <i class="fa-brands fa-github"></i>
+                                <p>Github</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://hub.docker.com/u/jellayy" class="list-link">
+                                <i class="fa-brands fa-docker"></i>
+                                <p>Docker Hub</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!-- Load JS -->
+    <script src="js/jquery/jquery.js"></script>
+    <script src="js/nav.js"></script>
 
     </body>
 </html>
