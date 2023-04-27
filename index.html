@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- Load Stylesheets -->
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="assets/style/style.css">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,13 @@
         <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 
         <title>Austin Lynn Huffman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <!-- Vanta.js Animated Background -->
         <div id="background-animation"></div>
-        <script src="js/vantajs/three.min.js"></script>
-        <script src="js/vantajs/vanta.waves.min.js"></script>
+        <script src="assets/js/vantajs/three.min.js"></script>
+        <script src="assets/js/vantajs/vanta.waves.min.js"></script>
         <script>
         VANTA.WAVES({
         el: "#background-animation",
@@ -110,9 +111,23 @@
             </div>
         </div>
 
-    <!-- Load JS -->
-    <script src="js/jquery/jquery.js"></script>
-    <script src="js/nav.js"></script>
+        <!-- Preloader -->
+        <div id="preloader" class="preloader">
+            <div class="wrapper">
+                <div class="flexdiv" style="flex-direction: column; align-items: center;">
+                    <img src="assets/img/2023_ahlogo_whiteontransparent_crop.png">
+                    <div class="progress-container">
+                        <progress value="50" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load JS -->
+        <script src="assets/js/swiped-events/swiped-events.min.js"></script>
+        <script src="assets/js/jquery/jquery.js"></script>
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/animations.js"></script>
 
     </body>
 </html>

@@ -21,6 +21,14 @@ $(function() {
     $('#development-link').click(function() {
         showDevelopment();
     })
+
+    document.addEventListener('swiped-left', function(e) {
+        showDevelopment();
+    });
+
+    document.addEventListener('swiped-right', function(e) {
+        showPhotography();
+    });
 })
 
 

@@ -10,6 +10,8 @@ html * {
 
 body {
     background-color: #111111;
+    height: 100%;
+    overflow: hidden;
 }
 
 .flexdiv {
@@ -131,4 +133,64 @@ body {
 
 .list-link:hover {
     background-color: #5d5d5d;
+}
+
+/* Preloader */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    width: 100%;
+    height: 100%;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+progress {
+    opacity: 0;
+}
+
+.preloader img {
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.progress-container {
+    position: relative;
+    display: inline-block;
+    background: #000000;
+    height: 7px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 0;
+    animation: progress-animation 1s ease-in-out forwards;
+}
+
+@keyframes progress-animation {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
