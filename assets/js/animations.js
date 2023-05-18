@@ -1,4 +1,5 @@
-// Manages the animations that run on page load
+// animations.js - Manages the animations that run on page load
+// c: Austin Huffman - Jellayy
 
 
 // AnimateCSS handler function

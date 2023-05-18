@@ -1,4 +1,5 @@
-// Manages navbuttons in card header
+// nav.js - Manages navigation between sections
+// c: Austin Huffman - Jellayy
 
 
 // On Load
@@ -16,28 +17,31 @@ $(function() {
     $('#photography-link').click(function() {
         showPhotography();
     })
+    // Photography swipe right handler for mobile (using swiped-events.js)
+    document.addEventListener('swiped-right', function(e) {
+        showPhotography();
+    });
 
-    // Development nav handler
+    // Development navbutton handler
     $('#development-link').click(function() {
         showDevelopment();
     })
-
+    // Development swipe left handler for mobile (using swiped-events.js)
     document.addEventListener('swiped-left', function(e) {
         showDevelopment();
-    });
-
-    document.addEventListener('swiped-right', function(e) {
-        showPhotography();
     });
 })
 
 
+// Play animation and change state to show photography section
 function showPhotography() {
     $('#card-content-wrapper').css("transform", "translateX(0)");
     $('#photography-link').addClass('selected');
     $('#development-link').removeClass('selected');
 }
 
+
+// Play animation and change state to show development section
 function showDevelopment() {
     $('#card-content-wrapper').css("transform", `translateX(-${$("#photography").width()}px)`);
     $('#development-link').addClass('selected');
