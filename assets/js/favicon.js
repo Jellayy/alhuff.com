@@ -16,12 +16,12 @@ $(function() {
 // Change favicon content
 function themeChange(event) {
     if(event.matches) {
-        console.log('themeChange: Dark browser theme detected, showing dark favicon')
+        console.debug('themeChange: Dark browser theme detected, showing dark favicon')
         $('#favicon-16x16').attr('href', '/assets/icons/dark/favicon-16x16.png')
         $('#favicon-32x32').attr('href', '/assets/icons/dark/favicon-32x32.png')
     }
     else {
-        console.log('themeChange: Light browser theme detected, showing light favicon')
+        console.debug('themeChange: Light browser theme detected, showing light favicon')
         $('#favicon-16x16').attr('href', '/assets/icons/light/favicon-16x16.png')
         $('#favicon-32x32').attr('href', '/assets/icons/light/favicon-32x32.png')
     }
